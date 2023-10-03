@@ -12,8 +12,8 @@ func _process(delta):
 
 
 func _on_story_pressed():
-	get_tree().change_scene_to_file("res://scene0.tscn")
+	get_tree().change_scene_to_file("res://world.tscn")
 
 
 func _on_back_pressed():
-	get_tree().change_scene_to_file("res://main_menu.tscn")
+	get_tree().change_scene_to_file("res://menu/main_menu.tscn")

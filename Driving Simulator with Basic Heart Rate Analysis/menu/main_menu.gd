@@ -11,7 +11,7 @@ func _process(_delta):
 
 
 func _on_start_pressed():
-		get_tree().change_scene_to_file("res://start_screen.tscn")
+		get_tree().change_scene_to_file("res://menu/start_screen.tscn")
 	
 
 
