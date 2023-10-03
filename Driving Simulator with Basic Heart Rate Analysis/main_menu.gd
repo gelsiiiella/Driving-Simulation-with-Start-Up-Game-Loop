@@ -6,11 +6,14 @@ func _ready():
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 
 func _on_start_pressed():
-	var start = load("res://start_screen.tscn").instantiate()
-	get_tree().current_scene.add_child(start)
+		get_tree().change_scene_to_file("res://start_screen.tscn")
 	
+
+
+func _on_exit_pressed():
+	get_tree().quit()
