@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://djqca6gy45th7"]
+
+[ext_resource type="Script" path="res://start_screen.gd" id="1_vymw0"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 462.0
+offset_bottom = 286.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vymw0")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 2.137
+anchor_bottom = 2.047
+offset_left = 7.0
+offset_right = -3163.33
+offset_bottom = -1716.2
+
+[node name="StartPanel" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 116.0
+offset_right = 1461.0
+offset_bottom = 812.0
+theme_override_constants/separation = 150
+
+[node name="Story" type="Button" parent="Panel/StartPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "STORY MODE"
+
+[node name="Free Play" type="Button" parent="Panel/StartPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "FREE PLAY"
+
+[connection signal="pressed" from="Panel/StartPanel/Story" to="." method="_on_story_pressed"]
