@@ -4,8 +4,8 @@ class_name TerrainController
 # Called when the node enters the scene tree for the first time.
 var RoadBlocks:Array = []
 var terrain_belt: Array[MeshInstance3D] = []
-@export var terrain_vel: float = 10.0
-@export var terrain_blocks = 4
+@export var terrain_vel: float = 10
+@export var terrain_blocks = 6
 @export_dir var terrain_blocks_path = "res://road"
 func _ready() -> void:
 	_load_terrain_scenes(terrain_blocks_path)
@@ -18,6 +18,7 @@ func _physics_process(delta: float) -> void:
 func _init_blocks(number_of_blocks: int) -> void:
 	for block_index in number_of_blocks:
 		var block = RoadBlocks.pick_random().instantiate()
+		print("Block: " , block , "Index: " , block_index)
 		if block_index == 0:
 			block.position.z = block.mesh.size.y/2
 		else:
