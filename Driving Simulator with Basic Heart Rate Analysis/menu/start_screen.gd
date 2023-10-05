@@ -3,14 +3,17 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	pass # Replace with function body.
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
 
-func _on_start_pressed():
-	var start = load("res://start_screen.tscn").instantiate()
-	get_tree().current_scene.add_child(start)
-	
+func _on_story_pressed():
+	get_tree().change_scene_to_file("res://world.tscn")
+
+
+func _on_back_pressed():
+	get_tree().change_scene_to_file("res://menu/main_menu.tscn")
